@@ -1,12 +1,14 @@
 import React from 'react';
-import './App.css';
 import Weather from './components/Weather';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bulma/css/bulma.css'
 
 function App() {
   
   return (
     <div className="App">
-    <h1>My Weather App</h1>
+    <h1>React to Weather 😀</h1>
     <Weather />
     </div>
   );
