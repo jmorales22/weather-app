@@ -13,34 +13,6 @@ const customReactionEmojis = [
     keywords: ["thumbsup"]
   },
   {
-    name: "clap",
-    short_names: ["clap"],
-    text: "",
-    emoticons: [],
-    keywords: ["clap"]
-  },
-  {
-    name: "raised_hands",
-    short_names: ["raised_hands"],
-    text: "",
-    emoticons: [],
-    keywords: ["raised_hands"]
-  },
-  {
-    name: "handshake",
-    short_names: ["handshake"],
-    text: "",
-    emoticons: [],
-    keywords: ["handshake"]
-  },
-  {
-    name: "grinning_face_with_star_eyes",
-    short_names: ["grinning_face_with_star_eyes"],
-    text: "",
-    emoticons: [],
-    keywords: ["grinning_face_with_star_eyes"]
-  },
-  {
     name: "hearts",
     short_names: ["hearts"],
     text: "",
@@ -48,25 +20,11 @@ const customReactionEmojis = [
     keywords: ["hearts"]
   },
   {
-    name: "trophy",
-    short_names: ["trophy"],
+    name: "the_horns",
+    short_names: ["the_horns"],
     text: "",
     emoticons: [],
-    keywords: ["trophy"]
-  },
-  {
-    name: "medal",
-    short_names: ["medal"],
-    text: "",
-    emoticons: [],
-    keywords: ["medal"]
-  },
-  {
-    name: "mega",
-    short_names: ["mega"],
-    text: "",
-    emoticons: [],
-    keywords: ["mega", "cheering megaphone"]
+    keywords: ["sign_of_the_horns"]
   },
   {
     name: "zap",
@@ -76,39 +34,11 @@ const customReactionEmojis = [
     keywords: ["zap", "high voltage sign"]
   },
   {
-    name: "tada",
-    short_names: ["tada"],
+    name: "poop",
+    short_names: ["poop"],
     text: "",
     emoticons: [],
-    keywords: ["tada", "party popper"]
-  },
-  {
-    name: "confetti_ball",
-    short_names: ["confetti_ball"],
-    text: "",
-    emoticons: [],
-    keywords: ["confetti_ball"]
-  },
-  {
-    name: "rocket",
-    short_names: ["rocket"],
-    text: "",
-    emoticons: [],
-    keywords: ["rocket"]
-  },
-  {
-    name: "fire",
-    short_names: ["fire"],
-    text: "",
-    emoticons: [],
-    keywords: ["fire"]
-  },
-  {
-    name: "hammer_and_wrench",
-    short_names: ["hammer_and_wrench"],
-    text: "",
-    emoticons: [],
-    keywords: ["hammer_and_wrench"]
+    keywords: ["poop"]
   }
 ];
 
@@ -143,11 +73,13 @@ class Reactions extends Component {
     });
     if (isEmojiAlreadyFound) {
       this.setState({
-        selectedEmojis: newSelectedEmojis
+        selectedEmojis: newSelectedEmojis,
+        reactionShown: false
       });
     } else {
       this.setState({
-        selectedEmojis: [...newSelectedEmojis, emojiObjectWithReactionCount]
+        selectedEmojis: [...newSelectedEmojis, emojiObjectWithReactionCount],
+        reactionShown: false
       });
     }
   };
@@ -171,8 +103,8 @@ class Reactions extends Component {
                 </Fragment>
               );
             })}
-            <div tabIndex="0" onClick={this.onReactionClick}>
-            <span className="reaction__counter-value" role="img" aria-label="smiley">😀+</span>
+            <div tabIndex="0" onClick={this.onReactionClick}>😀
+            <span className="reaction__counter-value">+</span>
             </div>
             <br/>
             {this.state.reactionShown && (

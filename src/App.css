@@ -36,30 +36,61 @@
     transform: rotate(360deg);
   }
 }
+.submit {
+  margin: 20px;
+}
 
-.reactions {
-  margin-top: 20px;
- }
- .reactions .reactions-counter {
+.tile.is-parent {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  width: 200px;
+  height: 350px;
+}
+
+.tile.is-ancestor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: auto;
+}
+
+.reactions {
+  margin-top: 5px;
  }
+
+.reactions .reactions-counter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ }
+
  .reactions .emoji-mart {
   z-index: 999;
  }
+
  .reactions .emoji-mart-anchors {
   display: none;
  }
+
  .reactions .emoji-mart-search {
   display: none;
  }
+
  .reactions .emoji-mart-bar {
   display: none;
  }
+
  .reactions .emoji-mart-scroll {
   overflow: auto;
   height: auto;
  }
+ 
  .reactions .emoji-mart-category-label {
   display: none;
  }
+
+ .navbar {
+  background-color:#DCE0E0!important;
+ }
+
