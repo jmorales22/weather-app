@@ -45,7 +45,7 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 200px;
-  height: 350px;
+  height: 375px;
 }
 
 .tile.is-ancestor {
@@ -94,3 +94,14 @@
   background-color:#DCE0E0!important;
  }
 
+ .navbar-brand {
+  font-family: 'Times New Roman', Times, serif!important;
+ }
+
+ .location {
+   font-size: 30px;
+ }
+
+ .currentOutlook {
+   font-size: 20px;
+ }

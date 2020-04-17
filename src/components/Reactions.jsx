@@ -85,7 +85,7 @@ class Reactions extends Component {
   };
 
   render() {
-    console.log(this.state.selectedEmojis);
+    console.log("This array", this.state.selectedEmojis);
     return (
       <div className="reactions">
         <span>

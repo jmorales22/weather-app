@@ -27,7 +27,7 @@ class Weather extends Component {
     if (!!testZip) {
       const params = this.state.value;
       const response = await fetch(
-        `http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${params}&days=8`
+        `http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${params}&days=9`
       );
       const data = await response.json();
       console.log("this is the data", data);
@@ -46,18 +46,21 @@ class Weather extends Component {
 
     return (
       <div>
-        <form class="entry" onSubmit={this.handleSubmit}>
-          <input
-            type="text"
-            data-testid="messageText"
-            placeholder="Enter Your Zip Code"
-            onChange={this.handleChange}
-            value={value}
-          />
-          <button className="submit" type="submit" data-testid="submitButton">
-            Submit
-          </button>
-        </form>
+        <div className="entry">
+          <h1 className="title is-1">React to Weather 😀</h1>
+          <form onSubmit={this.handleSubmit}>
+            <input
+              type="text"
+              data-testid="messageText"
+              placeholder="Enter Your Zip Code"
+              onChange={this.handleChange}
+              value={value}
+            />
+            <button className="submit" type="submit" data-testid="submitButton">
+              Submit
+            </button>
+          </form>
+        </div>
         <CurrentWeather output={output} />
       </div>
     );
